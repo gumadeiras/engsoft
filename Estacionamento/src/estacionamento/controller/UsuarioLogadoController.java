@@ -5,11 +5,9 @@
  */
 package estacionamento.controller;
 
-import estacionamento.model.bo.CaixaBO;
 import estacionamento.model.vo.Estacionamento;
 import estacionamento.view.IUsuarioLogadoView;
 import estacionamento.view.ViewFacade;
-import java.awt.event.ActionEvent;
 
 /**
  *

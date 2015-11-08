@@ -15,8 +15,6 @@ import estacionamento.view.IEscolherVeiculoView;
 import estacionamento.view.IIdentificaClienteView;
 import estacionamento.view.ViewFacade;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

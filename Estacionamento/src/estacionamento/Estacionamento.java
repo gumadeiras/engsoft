@@ -6,9 +6,6 @@
 package estacionamento;
 
 import estacionamento.controller.UsuarioLogadoController;
-import estacionamento.model.bo.CaixaBO;
-import estacionamento.view.IUsuarioLogadoView;
-import estacionamento.view.ViewFacade;
 
 /**
  *
