@@ -8,8 +8,6 @@ package estacionamento.controller;
 import estacionamento.view.IBaseView;
 import estacionamento.view.IIdentificaClienteView;
 import estacionamento.view.ViewFacade;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  *

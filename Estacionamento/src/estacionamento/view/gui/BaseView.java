@@ -6,7 +6,6 @@
 package estacionamento.view.gui;
 
 import estacionamento.view.IBaseView;
-import estacionamento.view.IUsuarioLogadoView;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
