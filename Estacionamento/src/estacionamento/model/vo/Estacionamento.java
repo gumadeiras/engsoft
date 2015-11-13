@@ -13,8 +13,8 @@ public class Estacionamento {
     
     public static final int NUM_VAGAS = 396;
     
-    private int numBlocos;
-    private int numVagas;
+    private int numBloco;
+    private int numVaga;
     
     private Estacionamento(int numBlocos, int numVagas) {
         this.numBlocos = numBlocos;

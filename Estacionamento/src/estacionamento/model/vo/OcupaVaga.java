@@ -16,9 +16,9 @@ public class OcupaVaga {
     
     private Calendar dataEntrada;
     private Calendar dataSaida;
-    private float valorHora;
+    //private float valorHora;
     private Veiculo veiculo;
-    private Cliente cliente;
+    private Cliente cliente; //não precisa mais
 
     public OcupaVaga(Calendar dataEntrada, Calendar dataSaida, float valorHora, Veiculo veiculo, Cliente cliente) {
         this.dataEntrada = dataEntrada;

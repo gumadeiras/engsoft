@@ -1,6 +1,6 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+* To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package estacionamento.model.vo;
@@ -17,26 +17,26 @@ import java.util.Set;
  */
 public class Cliente extends Pessoa {
 
-    public enum Categoria {COMUM, MENSALISTA}
+    private enum PLANO { PLANO1, PLANO2, PLANO3 }
     
-    private Categoria categoria;
-    private Set<Veiculo> veiculos;
+    private PLANO plano;
+    private Set<Veiculo> veiculos; //vai ter um veiculo
     
-    public Cliente(String nome, String sobrenome, long cpf, Calendar dataNascimento, Genero sexo, int userID, long telefone, Calendar dataCadastro, Categoria categoria) {
+    public Cliente(String nome, String sobrenome, long cpf, Calendar dataNascimento, Genero sexo, int userID, long telefone, Calendar dataCadastro, PLANO plano) {
         super(nome, sobrenome, cpf, dataNascimento, sexo, userID, telefone, dataCadastro);
         
-        this.categoria = categoria;
-        this.veiculos = new HashSet<Veiculo>();
+        this.plano = plano;
+        this.veiculos = new HashSet<Veiculo>(); //só vai ter um veiculo
     }
 
-    public void setCategoria(Categoria categoria)
+    public void setPlano(PLANO plano)
     {
-        this.categoria = categoria;
+        this.plano = plano;
     }
     
-    public Categoria getCategoria()
+    public PLANO getPlano()
     {
-        return categoria;
+        return plano;
     }
     
     public void cadastrarVeiculo(Veiculo veiculo)
