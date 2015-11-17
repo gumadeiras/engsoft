@@ -13,27 +13,36 @@ public class Estacionamento {
     
     public static final int NUM_VAGAS = 396;
     
-    private int numBloco;
-    private int numVaga;
+    private int totalBlocos;
+    private int totalVagas;
+    private int vagasDisponiveis;
     
     private Estacionamento(int numBlocos, int numVagas) {
-        this.numBlocos = numBlocos;
-        this.numVagas = numVagas;
+        this.totalBlocos = numBlocos;
+        this.totalVagas = numVagas;
     }
 
     public int getNumBlocos() {
-        return numBlocos;
+        return totalBlocos;
     }
 
     public int getNumVagas() {
-        return numVagas;
+        return totalVagas;
     }
 
+    public int getVagasDisponiveis() {
+        return vagasDisponiveis;
+    }
+    
     public void setNumBlocos(int numBlocos) {
-        this.numBlocos = numBlocos;
+        this.totalBlocos = numBlocos;
     }
 
     public void setNumVagas(int numVagas) {
-        this.numVagas = numVagas;
+        this.totalVagas = numVagas;
+    }
+    
+    public void setVagasDisponiveis(int numVagasDisponiveis) {
+        this.vagasDisponiveis = numVagasDisponiveis;
     }
 }
