@@ -12,6 +12,17 @@ package estacionamento.model.bo;
 public class Estacionamento {
     
     public static final int NUM_VAGAS = 396;
+    public static final int NUM_BLOCOS = 11;
+    
+    private static Estacionamento instance;
+    
+    public static Estacionamento getInstance()
+    {
+        if (instance == null)
+            instance = new Estacionamento(NUM_BLOCOS, NUM_VAGAS);
+        
+        return instance;
+    }
     
     private int totalBlocos;
     private int totalVagas;
