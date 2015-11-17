@@ -5,12 +5,17 @@
  */
 package estacionamento.model.bo;
 
-import estacionamento.model.bo.Pessoa;
+import java.util.Calendar;
 
 /**
  *
  * @author gustavo
  */
-public class Gerente extends Pessoa{
+public class Gerente extends Pessoa {
+
+    public Gerente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro) {
+        super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
+        
+    }
     
 }

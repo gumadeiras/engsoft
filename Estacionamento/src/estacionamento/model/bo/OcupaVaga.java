@@ -5,10 +5,7 @@
  */
 package estacionamento.model.bo;
 
-import estacionamento.model.bo.Cliente;
-import estacionamento.model.bo.Veiculo;
 import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -18,16 +15,16 @@ public class OcupaVaga {
     
     private Calendar dataEntrada;
     private Calendar dataSaida;
-    //private float valorHora;
     private Veiculo veiculo;
-    private Cliente cliente; //não precisa mais
+    private int numBloco;
+    private int numVaga;
 
-    public OcupaVaga(Calendar dataEntrada, Calendar dataSaida, float valorHora, Veiculo veiculo, Cliente cliente) {
+    public OcupaVaga(Calendar dataEntrada, Calendar dataSaida, Veiculo veiculo, int numBloco, int numVaga) {
         this.dataEntrada = dataEntrada;
         this.dataSaida = dataSaida;
-        this.valorHora = valorHora;
         this.veiculo = veiculo;
-        this.cliente = cliente;
+        this.numBloco = numBloco;
+        this.numVaga = numVaga;
     }
 
     public Calendar getDataEntrada() {
@@ -37,17 +34,19 @@ public class OcupaVaga {
     public Calendar getDataSaida() {
         return dataSaida;
     }
-
-    public float getValorHora() {
-        return valorHora;
-    }
     
     public Veiculo getVeiculo() {
         return this.veiculo;
     }
     
-    public Cliente getCliente() {
-        return this.cliente;
+    public int getNumVaga()
+    {
+        return this.numVaga;
+    }
+    
+    public int getNumBloco()
+    {
+        return this.numBloco;
     }
     
     public void setDataEntrada(Calendar dataEntrada) {
@@ -58,23 +57,17 @@ public class OcupaVaga {
         this.veiculo = veiculo;
     }
     
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-    
     public void setDataSaida(Calendar dataSaida) {
         this.dataSaida = dataSaida;
     }
-
-    public void setValorHora(int valorHora) {
-        this.valorHora = valorHora;
+    
+    public void setNumVaga(int numVaga)
+    {
+        this.numVaga = numVaga;
     }
     
-    public float getSubTotal() {
-        
-        long diferenca = dataSaida.getTimeInMillis() - dataEntrada.getTimeInMillis();
-        int diferencaEmHoras = (int)TimeUnit.MILLISECONDS.toHours(diferenca);
-        
-        return valorHora * diferencaEmHoras;
+    public void setNumBloco(int numBloco)
+    {
+        this.numBloco = numBloco;
     }
 }

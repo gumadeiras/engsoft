@@ -5,14 +5,24 @@
  */
 package estacionamento.model.bo;
 
+import estacionamento.model.bo.funcionarios.IFuncionarioBehavior;
+import java.util.Calendar;
+
 /**
  *
  * @author gustavo
  */
-public class Funcionario {
+public class Funcionario extends Pessoa {
+
+    private final IFuncionarioBehavior behavior;
     
-    private enum TIPO {Caixa, Manobrista}
+    public Funcionario(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, IFuncionarioBehavior behavior) {
+        super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
+        this.behavior = behavior;
+    }
     
-    private TIPO
-    
+    public IFuncionarioBehavior getBehavior()
+    {
+        return behavior;
+    }
 }

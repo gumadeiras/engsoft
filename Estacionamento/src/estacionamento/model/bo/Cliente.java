@@ -5,8 +5,6 @@
  */
 package estacionamento.model.bo;
 
-import estacionamento.model.bo.Pessoa;
-import estacionamento.model.bo.Veiculo;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -18,53 +16,22 @@ import java.util.Set;
  * @author Flávio Keglevich and William Berrutti
  */
 public class Cliente extends Pessoa {
-
-    private enum PLANO { PLANO1, PLANO2, PLANO3 }
     
-    private PLANO plano;
-    private Set<Veiculo> veiculos; //vai ter um veiculo
+    private PlanoCliente plano;
+    private Veiculo veiculo;
     
-    public Cliente(String nome, String sobrenome, long cpf, Calendar dataNascimento, Genero sexo, int userID, long telefone, Calendar dataCadastro, PLANO plano) {
-        super(nome, sobrenome, cpf, dataNascimento, sexo, userID, telefone, dataCadastro);
-        
+    public Cliente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, PlanoCliente plano) {
+        super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
         this.plano = plano;
-        this.veiculos = new HashSet<Veiculo>(); //só vai ter um veiculo
     }
 
-    public void setPlano(PLANO plano)
+    public void setPlano(PlanoCliente plano)
     {
         this.plano = plano;
     }
     
-    public PLANO getPlano()
+    public PlanoCliente getPlano()
     {
         return plano;
-    }
-    
-    public void cadastrarVeiculo(Veiculo veiculo)
-    {
-        veiculos.add(veiculo);
-    }
-    
-    public void descadastrarVeiculo(Veiculo veiculo)
-    {
-        veiculos.remove(veiculo);
-    }
-    
-    public int getNumVeiculosCadastrados()
-    {
-        return veiculos.size();
-    }
-    
-    public List<Veiculo> listarVeiculosCadastrados()
-    {
-        LinkedList<Veiculo> resultado = new LinkedList<Veiculo>();
-        
-        for (Veiculo veiculo : veiculos)
-        {
-            resultado.add(veiculo);
-        }
-        
-        return resultado;
     }
 }
