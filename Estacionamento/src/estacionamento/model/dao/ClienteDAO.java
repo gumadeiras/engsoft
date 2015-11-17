@@ -5,9 +5,9 @@
  */
 package estacionamento.model.dao;
 
-import estacionamento.model.vo.Cliente;
-import estacionamento.model.vo.Pessoa;
-import estacionamento.model.vo.Veiculo;
+import estacionamento.model.bo.Cliente;
+import estacionamento.model.bo.Pessoa;
+import estacionamento.model.bo.Veiculo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

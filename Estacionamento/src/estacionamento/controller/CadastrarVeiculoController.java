@@ -6,7 +6,7 @@
 package estacionamento.controller;
 
 import estacionamento.model.bo.CaixaBO;
-import estacionamento.model.vo.Cliente;
+import estacionamento.model.bo.Cliente;
 import estacionamento.view.IBaseView;
 import estacionamento.view.ICadastrarVeiculoView;
 

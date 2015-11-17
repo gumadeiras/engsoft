@@ -5,9 +5,6 @@
  */
 package estacionamento.model.bo;
 
-import estacionamento.model.vo.Cliente;
-import estacionamento.model.vo.Veiculo;
-
 /**
  *
  * @author flavio

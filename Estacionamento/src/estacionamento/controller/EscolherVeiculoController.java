@@ -7,8 +7,8 @@ package estacionamento.controller;
 
 import estacionamento.model.bo.CaixaBO;
 import estacionamento.model.bo.ClienteNaoCadastradoException;
-import estacionamento.model.vo.Cliente;
-import estacionamento.model.vo.Veiculo;
+import estacionamento.model.bo.Cliente;
+import estacionamento.model.bo.Veiculo;
 import estacionamento.view.IBaseView;
 import estacionamento.view.IClienteNaoCadastradoView;
 import estacionamento.view.IEscolherVeiculoView;

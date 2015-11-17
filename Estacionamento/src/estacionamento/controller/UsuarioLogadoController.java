@@ -5,7 +5,7 @@
  */
 package estacionamento.controller;
 
-import estacionamento.model.vo.Estacionamento;
+import estacionamento.model.bo.Estacionamento;
 import estacionamento.view.IUsuarioLogadoView;
 import estacionamento.view.ViewFacade;
 

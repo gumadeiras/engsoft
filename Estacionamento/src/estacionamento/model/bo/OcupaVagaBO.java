@@ -6,9 +6,6 @@
 package estacionamento.model.bo;
 
 import estacionamento.model.dao.OcupaVagaDAO;
-import estacionamento.model.vo.Cliente;
-import estacionamento.model.vo.OcupaVaga;
-import estacionamento.model.vo.Veiculo;
 import java.util.Calendar;
 
 /**

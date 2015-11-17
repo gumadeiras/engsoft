@@ -5,8 +5,8 @@
  */
 package estacionamento.model.dao;
 
-import estacionamento.model.vo.OcupaVaga;
-import estacionamento.model.vo.Veiculo;
+import estacionamento.model.bo.OcupaVaga;
+import estacionamento.model.bo.Veiculo;
 import java.util.LinkedList;
 import java.util.List;
 

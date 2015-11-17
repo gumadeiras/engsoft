@@ -6,8 +6,6 @@
 package estacionamento.model.bo;
 
 import estacionamento.model.dao.ClienteDAO;
-import estacionamento.model.vo.Cliente;
-import estacionamento.model.vo.Veiculo;
 import java.util.List;
 
 /**
