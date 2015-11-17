@@ -7,6 +7,29 @@ package estacionamento.model.bo;
 
 /**
  *
- * @author flavio
+ * @author Gustavo Madeira Santana e Flávio Keglevich
  */
-public enum PlanoCliente { PREMIUM, TOP, CONVENCIONAL }
+
+public class PlanoCliente  {
+    
+    public static final PlanoCliente PREMIUM = new PlanoCliente(35.00);
+    public static final PlanoCliente TOP = new PlanoCliente(25.00);
+    public static final PlanoCliente CONVENCIONAL = new PlanoCliente(10.00);
+    
+    private double preco;
+    
+    private PlanoCliente(double preco)
+    {
+        this.preco = preco;
+    }
+    
+    public double getPreco()
+    {
+        return this.preco;
+    }
+    
+    public void setPreco(double preco)
+    {
+        this.preco = preco;
+    }
+}
