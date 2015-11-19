@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  *
  * @author flavio
  */
-public interface IOcuparVagaMensalista {
+public interface IOcuparVagaMensalistaView {
     
     String getCpf();
     
