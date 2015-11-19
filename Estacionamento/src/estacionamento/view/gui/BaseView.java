@@ -23,6 +23,7 @@ public class BaseView extends JFrame implements IBaseView {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.add(panelPrincipal);
+        
     }
     
     @Override

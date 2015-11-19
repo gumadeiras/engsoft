@@ -6,7 +6,8 @@
 package estacionamento.model.dao;
 
 import estacionamento.model.bo.Cliente;
-import estacionamento.model.bo.Pessoa;
+import estacionamento.model.bo.Genero;
+import estacionamento.model.bo.PlanoCliente;
 import estacionamento.model.bo.Veiculo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,11 +25,12 @@ public class ClienteDAO {
     
     private static void popularClientes()
     {
-        clientes.add(new Cliente ("Flavio", "Keglevich", 123456789, parseCalendar("5/03/1999"), Pessoa.Genero.MASCULINO, 001, 93018237, parseCalendar("21/03/2015"), Cliente.Categoria.COMUM));
-        clientes.add(new Cliente ("Gustavo", "Santana", 123456788, parseCalendar("11/10/2000"), Pessoa.Genero.MASCULINO, 002, 42317948, parseCalendar("20/10/2015"), Cliente.Categoria.COMUM));
-        clientes.add(new Cliente ("Laurien", "Santin", 123456787, parseCalendar("10/05/1998"), Pessoa.Genero.FEMININO, 003, 39104928, parseCalendar("19/05/2015"), Cliente.Categoria.MENSALISTA));
-        clientes.add(new Cliente ("William", "Berrutti", 123456786, parseCalendar("10/11/1997"), Pessoa.Genero.MASCULINO, 004, 72391042, parseCalendar("13/11/2015"), Cliente.Categoria.COMUM));
-        clientes.get(0).cadastrarVeiculo(new Veiculo("a","b","c"));
+        
+        clientes.add(new Cliente ("Flavio Keglevich", 123456789, parseCalendar("5/03/1999"), Genero.MASCULINO, 93018237, parseCalendar("21/03/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1234", "Gelo")));
+        clientes.add(new Cliente ("Gustavo Santana", 123456788, parseCalendar("11/10/2000"), Genero.MASCULINO, 42317948, parseCalendar("20/10/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1235", "Azul")));
+        clientes.add(new Cliente ("Laurien Santin", 123456787, parseCalendar("10/05/1998"), Genero.FEMININO, 39104928, parseCalendar("19/05/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1236", "Rosa")));
+        clientes.add(new Cliente ("William Berrutti", 123456786, parseCalendar("10/11/1997"), Genero.MASCULINO, 72391042, parseCalendar("13/11/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1237", "Preto")));
+        
     }
     
     private static Calendar parseCalendar(String valor) 

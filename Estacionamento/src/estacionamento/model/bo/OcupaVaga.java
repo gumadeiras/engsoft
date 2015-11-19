@@ -70,4 +70,9 @@ public class OcupaVaga {
     {
         this.numBloco = numBloco;
     }
+    
+    public double calcularPagamento()
+    {
+        return Estacionamento.getInstance().calcularPagamento(dataEntrada, dataSaida);
+    }
 }

@@ -16,14 +16,29 @@ import java.util.List;
  */
 public class OcupaVagaDAO {
     
-    private static final List<OcupaVaga> vagas = new LinkedList<>();
+    private static OcupaVagaDAO instance;
     
-    public static void ocuparVaga(OcupaVaga ocupa)
+    public static OcupaVagaDAO getInstance()
+    {
+        if (instance == null)
+            instance = new OcupaVagaDAO();
+        
+        return instance;
+    }
+    
+    private final List<OcupaVaga> vagas = new LinkedList<>();
+    
+    private OcupaVagaDAO()
+    {
+        
+    }
+    
+    public void ocuparVaga(OcupaVaga ocupa)
     {
         vagas.add(ocupa);
     }
     
-    public static OcupaVaga pesquisarVaga(Veiculo veiculo)
+    public OcupaVaga pesquisarVaga(Veiculo veiculo)
     {
         for (OcupaVaga ocupa : vagas)
         {
@@ -35,7 +50,7 @@ public class OcupaVagaDAO {
         return null;
     }
     
-    public static void desocuparVaga(OcupaVaga ocupa)
+    public void desocuparVaga(OcupaVaga ocupa)
     {
         vagas.remove(ocupa);
     }

@@ -6,10 +6,6 @@
 package estacionamento.model.bo;
 
 import java.util.Calendar;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 
 /**
  *
@@ -20,9 +16,10 @@ public class Cliente extends Pessoa {
     private PlanoCliente plano;
     private Veiculo veiculo;
     
-    public Cliente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, PlanoCliente plano) {
+    public Cliente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, PlanoCliente plano, Veiculo veiculo) {
         super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
         this.plano = plano;
+        this.veiculo = veiculo;
     }
 
     public void setPlano(PlanoCliente plano)
@@ -33,5 +30,15 @@ public class Cliente extends Pessoa {
     public PlanoCliente getPlano()
     {
         return plano;
+    }
+    
+    public void setVeiculo(Veiculo veiculo)
+    {
+        this.veiculo = veiculo;
+    }
+    
+    public Veiculo getVeiculo()
+    {
+        return veiculo;
     }
 }
