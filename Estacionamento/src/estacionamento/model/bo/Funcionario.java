@@ -16,17 +16,17 @@ import java.util.Calendar;
 public class Funcionario extends Pessoa implements IFuncionario {
 
     private final IFuncionarioBehavior behavior;
-    
+
     public Funcionario(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, IFuncionarioBehavior behavior) {
         super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
         this.behavior = behavior;
     }
-    
+
     public IFuncionarioBehavior getBehavior()
     {
         return behavior;
     }
-    
+
     @Override
     public void ocuparVagaComum(Veiculo veiculo, int numBloco, int numVaga)
     {
@@ -36,30 +36,30 @@ public class Funcionario extends Pessoa implements IFuncionario {
     }
 
     @Override
-    public void ocuparVagaMensalista(Cliente cliente, int numBloco, int numVaga) 
+    public void ocuparVagaMensalista(Cliente cliente, int numBloco, int numVaga)
     {
         ocuparVagaComum(cliente.getVeiculo(), numBloco, numVaga);
     }
-    
+
     @Override
     public double desocuparVagaComum(Veiculo veiculo)
     {
         OcupaVagaDAO ocupacaoDAO = OcupaVagaDAO.getInstance();
-        
+
         OcupaVaga ocupacao = ocupacaoDAO.pesquisarVaga(veiculo);
-        
+
         ocupacaoDAO.desocuparVaga(ocupacao);
-        
+
         ocupacao.setDataSaida(Calendar.getInstance());
-        
+
         return ocupacao.calcularPagamento();
     }
 
     @Override
-    public double desocuparVagaMensalista(Cliente cliente) 
+    public double desocuparVagaMensalista(Cliente cliente)
     {
         return desocuparVagaComum(cliente.getVeiculo());
     }
-    
-    
+
+
 }

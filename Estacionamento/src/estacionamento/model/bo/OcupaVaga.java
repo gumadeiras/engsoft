@@ -12,7 +12,7 @@ import java.util.Calendar;
  * @author Gustavo Madeira Santana e Flávio Keglevich
  */
 public class OcupaVaga {
-    
+
     private Calendar dataEntrada;
     private Calendar dataSaida;
     private Veiculo veiculo;
@@ -34,43 +34,43 @@ public class OcupaVaga {
     public Calendar getDataSaida() {
         return dataSaida;
     }
-    
+
     public Veiculo getVeiculo() {
         return this.veiculo;
     }
-    
+
     public int getNumVaga()
     {
         return this.numVaga;
     }
-    
+
     public int getNumBloco()
     {
         return this.numBloco;
     }
-    
+
     public void setDataEntrada(Calendar dataEntrada) {
         this.dataEntrada = dataEntrada;
     }
-    
+
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
-    
+
     public void setDataSaida(Calendar dataSaida) {
         this.dataSaida = dataSaida;
     }
-    
+
     public void setNumVaga(int numVaga)
     {
         this.numVaga = numVaga;
     }
-    
+
     public void setNumBloco(int numBloco)
     {
         this.numBloco = numBloco;
     }
-    
+
     public double calcularPagamento()
     {
         return Estacionamento.getInstance().calcularPagamento(dataEntrada, dataSaida);
