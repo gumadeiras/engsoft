@@ -62,7 +62,7 @@ public class LiberarVagaView extends javax.swing.JPanel implements ILiberarVagaV
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(74, 74, 74)
                 .addComponent(labelCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -72,7 +72,7 @@ public class LiberarVagaView extends javax.swing.JPanel implements ILiberarVagaV
                     .addComponent(labelValor)
                     .addComponent(bLiberar)
                     .addComponent(jLabel4))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +97,7 @@ public class LiberarVagaView extends javax.swing.JPanel implements ILiberarVagaV
                                 .addComponent(labelValor)
                                 .addGap(18, 18, 18)
                                 .addComponent(bLiberar)))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

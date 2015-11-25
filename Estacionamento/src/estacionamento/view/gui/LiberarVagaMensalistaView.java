@@ -61,7 +61,7 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel implements ILi
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
+                .addGap(82, 82, 82)
                 .addComponent(labelCPF)
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
