@@ -16,6 +16,16 @@ public class VeiculoDAO {
     
     protected static final List<Veiculo> veiculos = new LinkedList<>();
     
+    private static VeiculoDAO instance;
+    
+    public static VeiculoDAO getInstance()
+    {
+        if (instance == null)
+            instance = new VeiculoDAO();
+        
+        return instance;
+    }
+    
     private static void popularClientes()
     {
         veiculos.add(new Veiculo ("Gol", "RQE5652", "azul"));
@@ -23,4 +33,9 @@ public class VeiculoDAO {
         veiculos.add(new Veiculo ("Sonic", "KAD3456", "amarelo"));
         veiculos.add(new Veiculo ("Onix", "DAE2525", "rosa"));
     }   
+    
+    private VeiculoDAO()
+    {
+        
+    }
 }

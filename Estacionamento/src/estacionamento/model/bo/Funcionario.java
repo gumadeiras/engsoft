@@ -13,11 +13,11 @@ import java.util.Calendar;
  *
  * @author gustavo
  */
-public class Funcionario extends Pessoa implements IFuncionario {
+public class Funcionario extends Pessoa {
 
     private final IFuncionarioBehavior behavior;
 
-    public Funcionario(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, IFuncionarioBehavior behavior) {
+    public Funcionario(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, IFuncionarioBehavior behavior) {
         super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
         this.behavior = behavior;
     }
@@ -27,7 +27,6 @@ public class Funcionario extends Pessoa implements IFuncionario {
         return behavior;
     }
 
-    @Override
     public void ocuparVagaComum(Veiculo veiculo, int numBloco, int numVaga)
     {
         OcupaVaga ocupacao = new OcupaVaga(Calendar.getInstance(), null, veiculo, numBloco, numVaga);
@@ -35,18 +34,16 @@ public class Funcionario extends Pessoa implements IFuncionario {
         ocupacaoDAO.ocuparVaga(ocupacao);
     }
 
-    @Override
     public void ocuparVagaMensalista(Cliente cliente, int numBloco, int numVaga)
     {
         ocuparVagaComum(cliente.getVeiculo(), numBloco, numVaga);
     }
 
-    @Override
-    public double desocuparVagaComum(Veiculo veiculo)
+    public double desocuparVagaComum(String placa)
     {
         OcupaVagaDAO ocupacaoDAO = OcupaVagaDAO.getInstance();
 
-        OcupaVaga ocupacao = ocupacaoDAO.pesquisarVaga(veiculo);
+        OcupaVaga ocupacao = ocupacaoDAO.pesquisarVagaPorPlaca(placa);
 
         ocupacaoDAO.desocuparVaga(ocupacao);
 
@@ -54,11 +51,10 @@ public class Funcionario extends Pessoa implements IFuncionario {
 
         return ocupacao.calcularPagamento();
     }
-
-    @Override
+    
     public double desocuparVagaMensalista(Cliente cliente)
     {
-        return desocuparVagaComum(cliente.getVeiculo());
+        return desocuparVagaComum(cliente.getVeiculo().getPlaca());
     }
 
 

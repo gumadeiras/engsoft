@@ -14,13 +14,13 @@ import java.util.Calendar;
 public class Pessoa {
     
     private String nome;
-    private long cpf;
+    private String cpf;
     private Calendar dataNascimento;
     private Genero genero;
     private long telefone;
     private Calendar dataCadastro;
 
-    public Pessoa(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro) {
+    public Pessoa(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -33,7 +33,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -57,7 +57,7 @@ public class Pessoa {
         return nome;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 

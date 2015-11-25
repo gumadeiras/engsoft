@@ -50,6 +50,18 @@ public class OcupaVagaDAO {
         return null;
     }
     
+    public OcupaVaga pesquisarVagaPorPlaca(String placa)
+    {
+        for (OcupaVaga ocupa : vagas)
+        {
+            if (ocupa.getVeiculo().getPlaca() == placa)
+            {
+                return ocupa;
+            }
+        }
+        return null;
+    }
+    
     public void desocuparVaga(OcupaVaga ocupa)
     {
         vagas.remove(ocupa);

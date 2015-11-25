@@ -16,7 +16,7 @@ public class Cliente extends Pessoa {
     private PlanoCliente plano;
     private Veiculo veiculo;
     
-    public Cliente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, PlanoCliente plano, Veiculo veiculo) {
+    public Cliente(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro, PlanoCliente plano, Veiculo veiculo) {
         super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
         this.plano = plano;
         this.veiculo = veiculo;

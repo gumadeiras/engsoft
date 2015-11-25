@@ -23,16 +23,24 @@ public class ClienteDAO {
     
     private static final List<Cliente> clientes = new LinkedList<>();
     
+    private static ClienteDAO instance;
+    
+    public static ClienteDAO getInstance()
+    {
+        if (instance == null)
+            instance = new ClienteDAO();
+        
+        return instance;
+    }
+
     private static void popularClientes()
     {
-        
-        clientes.add(new Cliente ("Flavio Keglevich", 123456789, parseCalendar("5/03/1999"), Genero.MASCULINO, 93018237, parseCalendar("21/03/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1234", "Gelo")));
-        clientes.add(new Cliente ("Gustavo Santana", 123456788, parseCalendar("11/10/2000"), Genero.MASCULINO, 42317948, parseCalendar("20/10/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1235", "Azul")));
-        clientes.add(new Cliente ("Laurien Santin", 123456787, parseCalendar("10/05/1998"), Genero.FEMININO, 39104928, parseCalendar("19/05/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1236", "Rosa")));
-        clientes.add(new Cliente ("William Berrutti", 123456786, parseCalendar("10/11/1997"), Genero.MASCULINO, 72391042, parseCalendar("13/11/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1237", "Preto")));
-        
+        clientes.add(new Cliente ("Flavio Keglevich", "123456789123", parseCalendar("5/03/1999"), Genero.MASCULINO, 93018237, parseCalendar("21/03/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1234", "Gelo")));
+        clientes.add(new Cliente ("Gustavo Santana", "123456788123", parseCalendar("11/10/2000"), Genero.MASCULINO, 42317948, parseCalendar("20/10/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1235", "Azul")));
+        clientes.add(new Cliente ("Laurien Santin", "123456787123", parseCalendar("10/05/1998"), Genero.FEMININO, 39104928, parseCalendar("19/05/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1236", "Rosa")));
+        clientes.add(new Cliente ("William Berrutti", "123456786123", parseCalendar("10/11/1997"), Genero.MASCULINO, 72391042, parseCalendar("13/11/2015"), PlanoCliente.CONVENCIONAL, new Veiculo("Fusca", "ABC-1237", "Preto")));     
     }
-    
+
     private static Calendar parseCalendar(String valor) 
     {
         Calendar resultado = Calendar.getInstance();
@@ -48,7 +56,12 @@ public class ClienteDAO {
         return resultado;
     }
     
-    public static Cliente identificarCliente(long cpf)
+    private ClienteDAO()
+    {
+        
+    }
+    
+    public Cliente identificarCliente(String cpf)
     {
         if (clientes.isEmpty())
         {

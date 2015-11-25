@@ -30,12 +30,12 @@ public class FuncionarioFactory {
         
     }
     
-    public Funcionario createCaixa(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro)
+    public Funcionario createCaixa(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro)
     {
         return new Funcionario(nome, cpf, dataNascimento, genero, telefone, dataCadastro, new CaixaBehavior());
     }
     
-    public Funcionario createManobrista(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro)
+    public Funcionario createManobrista(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro)
     {
         return new Funcionario(nome, cpf, dataNascimento, genero, telefone, dataCadastro, new ManobristaBehavior());
     }

@@ -13,7 +13,7 @@ import java.util.Calendar;
  */
 public class Gerente extends Pessoa {
 
-    public Gerente(String nome, long cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro) {
+    public Gerente(String nome, String cpf, Calendar dataNascimento, Genero genero, long telefone, Calendar dataCadastro) {
         super(nome, cpf, dataNascimento, genero, telefone, dataCadastro);
     }
     
