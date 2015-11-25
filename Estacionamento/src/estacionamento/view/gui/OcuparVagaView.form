@@ -17,26 +17,19 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-                      <Component id="labelOcupaVaga" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="labelPlaca" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelModelo" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelCor" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="fieldModelo" pref="150" max="32767" attributes="0"/>
-                          <Component id="fieldPlaca" pref="150" max="32767" attributes="0"/>
-                          <Component id="fieldCor" alignment="0" pref="150" max="32767" attributes="0"/>
-                          <Component id="bOcupaVaga" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="labelPlaca" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelModelo" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCor" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="bOcupaVaga" alignment="2" max="32767" attributes="0"/>
+                  <Component id="fieldModelo" alignment="2" pref="150" max="32767" attributes="0"/>
+                  <Component id="labelOcupaVaga" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldCor" alignment="2" pref="150" max="32767" attributes="0"/>
+                  <Component id="fieldPlaca" alignment="2" pref="150" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="117" max="32767" attributes="0"/>
           </Group>
