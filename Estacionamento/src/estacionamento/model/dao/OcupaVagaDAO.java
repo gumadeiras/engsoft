@@ -9,6 +9,7 @@ import estacionamento.model.bo.OcupaVaga;
 import estacionamento.model.bo.Veiculo;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -54,7 +55,7 @@ public class OcupaVagaDAO {
     {
         for (OcupaVaga ocupa : vagas)
         {
-            if (ocupa.getVeiculo().getPlaca() == placa)
+            if (Objects.equals(ocupa.getVeiculo().getPlaca(), placa))
             {
                 return ocupa;
             }

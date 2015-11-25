@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -21,7 +22,7 @@ import java.util.List;
  */
 public class ClienteDAO {
     
-    private static final List<Cliente> clientes = new LinkedList<>();
+    private static List<Cliente> clientes = new LinkedList<>();
     
     private static ClienteDAO instance;
     
@@ -70,7 +71,7 @@ public class ClienteDAO {
         
         for (Cliente cliente : clientes)
         {
-            if (cliente.getCpf() == cpf)
+            if (Objects.equals(cliente.getCpf(), cpf))
                 return cliente;
         }
         

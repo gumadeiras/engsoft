@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
  *
  * @author flavio
  */
-public class MainController implements ActionListener {
+public class MainController {
     
     private IMainView view;
     
@@ -32,26 +32,19 @@ public class MainController implements ActionListener {
     public MainController()
     {
         view = ViewFacade.getMainView();
-        
-        view.addPanel(caixaView = ViewFacade.getCaixaView());
-        view.addPanel(liberarVagaMensalistaView = ViewFacade.getLiberarVagaMensalistaView());
-        view.addPanel(liberarVagaView = ViewFacade.getLiberarVagaView());
-        view.addPanel(ocuparVagaMensalistaView = ViewFacade.getOcuparVagaMensalistaView());
-        view.addPanel(ocuparVagaView = ViewFacade.getOcuparVagaView());
-        
-        liberarVagaMensalistaView.addOuvinteOk(this);
-        liberarVagaView.addOuvinteOk(this);
-        ocuparVagaMensalistaView.addOuvinteOk(this);
-        ocuparVagaView.addOuvinteOk(this);
-        
-        view.swapPanel(ocuparVagaView);
-        
-        //caixaView.addOuvinteDesocuparVaga();
-    }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        view.swapPanel(caixaView);
+        view.addPanel(caixaView = ViewFacade.getCaixaView());
+        
+        view.addPanel(ocuparVagaView = ViewFacade.getOcuparVagaView());
+        ocuparVagaView.addOuvinteOk(new OcuparVagaActionListener(ocuparVagaView, view, caixaView));
+        
+        view.addPanel(ocuparVagaMensalistaView = ViewFacade.getOcuparVagaMensalistaView());
+        ocuparVagaMensalistaView.addOuvinteOk(new OcuparVagaMensalistaActionListener(ocuparVagaMensalistaView, view, caixaView));
+        
+        view.addPanel(liberarVagaView = ViewFacade.getLiberarVagaView());
+        liberarVagaView.addOuvinteOk(new LiberarVagaActionListener(liberarVagaView, view, caixaView));
+        
+        view.addPanel(liberarVagaMensalistaView = ViewFacade.getLiberarVagaMensalistaView());
+        liberarVagaMensalistaView.addOuvinteOk(new LiberarVagaMensalistaActionListener(liberarVagaMensalistaView, view, caixaView));
     }
-    
 }
