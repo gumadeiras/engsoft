@@ -7,6 +7,7 @@ package estacionamento.view.gui;
 
 import estacionamento.view.IMainView;
 import java.awt.CardLayout;
+import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -33,15 +34,15 @@ public class MainView extends JFrame implements IMainView {
     }
     
     @Override
-    public void swapPanel(JPanel panel)
+    public void swapPanel(Object panel)
     {
         layout.show(mainPanel, panel.getClass().getName());
     }
     
     @Override
-    public void addPanel(JPanel panel)
+    public void addPanel(Object panel)
     {
-        mainPanel.add(panel, panel.getClass().getName());
+        mainPanel.add((Component) panel, panel.getClass().getName());
         setVisible(true);
     }
 }

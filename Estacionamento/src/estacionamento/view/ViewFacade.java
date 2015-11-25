@@ -5,7 +5,12 @@
  */
 package estacionamento.view;
 
-import estacionamento.view.gui.*;
+import estacionamento.view.gui.CaixaView;
+import estacionamento.view.gui.LiberarVagaMensalistaView;
+import estacionamento.view.gui.LiberarVagaView;
+import estacionamento.view.gui.MainView;
+import estacionamento.view.gui.OcuparVagaMensalistaView;
+import estacionamento.view.gui.OcuparVagaView;
 
 /**
  *

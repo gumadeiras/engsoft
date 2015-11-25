@@ -5,16 +5,14 @@
  */
 package estacionamento.view;
 
-import javax.swing.JPanel;
-
 /**
  *
  * @author flavio
  */
 public interface IMainView {
     
-    public void swapPanel(JPanel panel);
+    public void swapPanel(Object panel);
     
-    public void addPanel(JPanel panel);
+    public void addPanel(Object panel);
     
 }

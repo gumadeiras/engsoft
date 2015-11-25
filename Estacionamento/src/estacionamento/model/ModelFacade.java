@@ -11,7 +11,6 @@ import estacionamento.model.bo.Genero;
 import estacionamento.model.bo.Veiculo;
 import estacionamento.model.bo.funcionarios.CaixaBehavior;
 import estacionamento.model.dao.ClienteDAO;
-import estacionamento.model.dao.OcupaVagaDAO;
 import java.util.Calendar;
 
 /**
