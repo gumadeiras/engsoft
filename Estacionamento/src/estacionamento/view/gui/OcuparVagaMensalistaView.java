@@ -5,11 +5,14 @@
  */
 package estacionamento.view.gui;
 
+import estacionamento.view.IOcuparVagaMensalistaView;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author gustavo
  */
-public class OcuparVagaMensalistaView extends javax.swing.JPanel {
+public class OcuparVagaMensalistaView extends javax.swing.JPanel implements IOcuparVagaMensalistaView{
 
     /**
      * Creates new form OcuparVagaMensalistaView
@@ -52,9 +55,7 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(labelOcupaVaga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(bOcupaVaga, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(bOcupaVaga, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(131, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -64,9 +65,9 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel {
                 .addComponent(labelOcupaVaga)
                 .addGap(18, 18, 18)
                 .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bOcupaVaga)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -80,4 +81,14 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel {
     private javax.swing.JTextField fieldCPF;
     private javax.swing.JLabel labelOcupaVaga;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public String getCpf() {
+        return fieldCPF.getText();
+    }
+
+    @Override
+    public void addOuvinteOk(ActionListener ouvinte) {
+        bOcupaVaga.addActionListener(ouvinte);
+    }
 }

@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  */
 public class MainView extends JFrame {
     
-    private JPanel mainPanel;
+    public JPanel mainPanel;
     private CardLayout layout;
     
     public MainView()
@@ -26,22 +26,19 @@ public class MainView extends JFrame {
         
         layout = new CardLayout();
         
-        //setLayout(layout);
-        
         mainPanel = new JPanel(layout);
         add(mainPanel);
         setVisible(true);
-        //mainPanel.setVisible(true);
     }
     
-    public void swapPanel(String name)
+    public void swapPanel(JPanel panel)
     {
-        layout.show(mainPanel, name);
+        layout.show(mainPanel, panel.getClass().getName());
     }
     
-    public void addPanel(JPanel panel, String name)
+    public void addPanel(JPanel panel)
     {
-        mainPanel.add(panel, name);
-        //mainPanel.add(panel);
+        mainPanel.add(panel, panel.getClass().getName());
+        setVisible(true);
     }
 }

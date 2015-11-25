@@ -5,11 +5,14 @@
  */
 package estacionamento.view.gui;
 
+import estacionamento.view.IOcuparVagaView;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author gustavo
  */
-public class OcupaVagaView extends javax.swing.JPanel {
+public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView {
 
     /**
      * Creates new form OcupaVagaView
@@ -70,17 +73,15 @@ public class OcupaVagaView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(bOcupaVaga, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(labelOcupaVaga))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldCor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(fieldModelo, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(fieldPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(fieldCor, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(bOcupaVaga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -124,4 +125,24 @@ public class OcupaVagaView extends javax.swing.JPanel {
     private javax.swing.JTextField fieldPlaca;
     private javax.swing.JLabel labelOcupaVaga;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public String getPlaca() {
+        return fieldPlaca.getText();
+    }
+
+    @Override
+    public String getCor() {
+        return fieldCor.getText();
+    }
+
+    @Override
+    public String getModelo() {
+        return fieldModelo.getText();
+    }
+
+    @Override
+    public void addOuvinteOk(ActionListener ouvinte) {
+        bOcupaVaga.addActionListener(ouvinte);
+    }
 }

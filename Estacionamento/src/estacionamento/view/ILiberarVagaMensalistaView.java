@@ -11,9 +11,9 @@ import java.awt.event.ActionListener;
  *
  * @author flavio
  */
-public interface IIdentificaClienteView extends IBaseView {
+public interface ILiberarVagaMensalistaView {
     
-    String getCPF();
+    String getCpf();
     
     void addOuvinteOk(ActionListener ouvinte);
     

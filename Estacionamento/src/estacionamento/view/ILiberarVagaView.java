@@ -11,8 +11,9 @@ import java.awt.event.ActionListener;
  *
  * @author flavio
  */
-public interface IVagaDisponivelView extends IBaseView {
+public interface ILiberarVagaView {
+    
+    String getPlaca();
     
     void addOuvinteOk(ActionListener ouvinte);
-    
 }
