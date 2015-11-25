@@ -23,7 +23,13 @@
                       <Component id="labelOcupaVaga" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="labelPlaca" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelModelo" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelCor" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="fieldModelo" pref="150" max="32767" attributes="0"/>
                           <Component id="fieldPlaca" pref="150" max="32767" attributes="0"/>
@@ -42,11 +48,20 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="labelOcupaVaga" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="fieldPlaca" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fieldPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Component id="fieldModelo" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fieldModelo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelModelo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="fieldCor" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fieldCor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelCor" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="bOcupaVaga" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="101" max="32767" attributes="0"/>
@@ -64,9 +79,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="fieldModelo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Modelo"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldModeloActionPerformed"/>
       </Events>
@@ -77,20 +89,29 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="fieldCor">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldCorActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="fieldPlaca">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Placa"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPlacaActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelCor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelModelo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modelo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPlaca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Placa:"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

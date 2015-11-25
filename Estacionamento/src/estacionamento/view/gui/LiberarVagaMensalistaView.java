@@ -33,8 +33,8 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
         labelValor = new javax.swing.JLabel();
         bLiberar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        labelCPF = new javax.swing.JLabel();
 
-        fieldCPF.setText("CPF");
         fieldCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldCPFActionPerformed(evt);
@@ -51,16 +51,12 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
 
         jLabel4.setText("Liberar Vaga Mensalista");
 
+        labelCPF.setText("CPF:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addContainerGap(129, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,6 +68,14 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
                             .addComponent(labelValor)
                             .addComponent(labelSaida))))
                 .addGap(145, 145, 145))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(labelCPF)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,7 +83,9 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCPF))
                 .addGap(18, 18, 18)
                 .addComponent(labelEntrada)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -101,6 +107,7 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
     private javax.swing.JButton bLiberar;
     private javax.swing.JTextField fieldCPF;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel labelCPF;
     private javax.swing.JLabel labelEntrada;
     private javax.swing.JLabel labelSaida;
     private javax.swing.JLabel labelValor;

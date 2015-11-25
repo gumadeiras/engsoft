@@ -35,6 +35,9 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
         labelOcupaVaga = new javax.swing.JLabel();
         fieldCor = new javax.swing.JTextField();
         fieldPlaca = new javax.swing.JTextField();
+        labelCor = new javax.swing.JLabel();
+        labelModelo = new javax.swing.JLabel();
+        labelPlaca = new javax.swing.JLabel();
 
         bOcupaVaga.setText("Ocupar Vaga");
         bOcupaVaga.addActionListener(new java.awt.event.ActionListener() {
@@ -43,7 +46,6 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
             }
         });
 
-        fieldModelo.setText("Modelo");
         fieldModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldModeloActionPerformed(evt);
@@ -52,19 +54,23 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
 
         labelOcupaVaga.setText("Ocupar Vaga");
 
-        fieldCor.setText("Cor");
         fieldCor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldCorActionPerformed(evt);
             }
         });
 
-        fieldPlaca.setText("Placa");
         fieldPlaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldPlacaActionPerformed(evt);
             }
         });
+
+        labelCor.setText("Cor:");
+
+        labelModelo.setText("Modelo:");
+
+        labelPlaca.setText("Placa:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -76,7 +82,12 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
                         .addGap(153, 153, 153)
                         .addComponent(labelOcupaVaga))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelPlaca)
+                            .addComponent(labelModelo)
+                            .addComponent(labelCor))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(fieldModelo, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                             .addComponent(fieldPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
@@ -90,11 +101,17 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
                 .addContainerGap()
                 .addComponent(labelOcupaVaga)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelPlaca))
                 .addGap(16, 16, 16)
-                .addComponent(fieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelModelo))
                 .addGap(18, 18, 18)
-                .addComponent(fieldCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCor))
                 .addGap(18, 18, 18)
                 .addComponent(bOcupaVaga)
                 .addContainerGap(101, Short.MAX_VALUE))
@@ -123,7 +140,10 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
     private javax.swing.JTextField fieldCor;
     private javax.swing.JTextField fieldModelo;
     private javax.swing.JTextField fieldPlaca;
+    private javax.swing.JLabel labelCor;
+    private javax.swing.JLabel labelModelo;
     private javax.swing.JLabel labelOcupaVaga;
+    private javax.swing.JLabel labelPlaca;
     // End of variables declaration//GEN-END:variables
 
     @Override
