@@ -12,8 +12,6 @@ import estacionamento.view.IMainView;
 import estacionamento.view.IOcuparVagaMensalistaView;
 import estacionamento.view.IOcuparVagaView;
 import estacionamento.view.ViewFacade;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  *

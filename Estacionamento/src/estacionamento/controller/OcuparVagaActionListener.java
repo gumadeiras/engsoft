@@ -9,8 +9,6 @@ import estacionamento.model.ModelFacade;
 import estacionamento.view.ICaixaView;
 import estacionamento.view.IMainView;
 import estacionamento.view.IOcuparVagaView;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  *
