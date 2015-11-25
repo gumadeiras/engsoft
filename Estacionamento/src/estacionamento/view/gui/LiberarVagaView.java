@@ -5,11 +5,15 @@
  */
 package estacionamento.view.gui;
 
+import estacionamento.view.ILiberarVagaView;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author gustavo
  */
-public class LiberarVagaView extends javax.swing.JPanel {
+public class LiberarVagaView extends javax.swing.JPanel implements ILiberarVagaView
+{
 
     /**
      * Creates new form LiberarVagaView
@@ -27,7 +31,7 @@ public class LiberarVagaView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fieldCPF = new javax.swing.JTextField();
+        fieldPlaca = new javax.swing.JTextField();
         labelEntrada = new javax.swing.JLabel();
         labelSaida = new javax.swing.JLabel();
         labelValor = new javax.swing.JLabel();
@@ -35,9 +39,9 @@ public class LiberarVagaView extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         labelCPF = new javax.swing.JLabel();
 
-        fieldCPF.addActionListener(new java.awt.event.ActionListener() {
+        fieldPlaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldCPFActionPerformed(evt);
+                fieldPlacaActionPerformed(evt);
             }
         });
 
@@ -51,33 +55,34 @@ public class LiberarVagaView extends javax.swing.JPanel {
 
         jLabel4.setText("Liberar Vaga");
 
-        labelCPF.setText("CPF:");
+        labelCPF.setText("Placa:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelEntrada)
-                    .addComponent(bLiberar)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelValor)
-                            .addComponent(labelSaida))))
-                .addGap(145, 145, 145))
             .addGroup(layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(labelCPF)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel4)))
-                .addContainerGap(129, Short.MAX_VALUE))
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(labelCPF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelEntrada)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(labelValor)
+                                        .addComponent(labelSaida))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(bLiberar))))
+                            .addComponent(fieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +91,7 @@ public class LiberarVagaView extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelCPF))
                 .addGap(18, 18, 18)
                 .addComponent(labelEntrada)
@@ -96,22 +101,32 @@ public class LiberarVagaView extends javax.swing.JPanel {
                 .addComponent(labelValor)
                 .addGap(18, 18, 18)
                 .addComponent(bLiberar)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCPFActionPerformed
+    private void fieldPlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPlacaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldCPFActionPerformed
+    }//GEN-LAST:event_fieldPlacaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bLiberar;
-    private javax.swing.JTextField fieldCPF;
+    private javax.swing.JTextField fieldPlaca;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel labelCPF;
     private javax.swing.JLabel labelEntrada;
     private javax.swing.JLabel labelSaida;
     private javax.swing.JLabel labelValor;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public String getPlaca() {
+        return fieldPlaca.getText();
+    }
+
+    @Override
+    public void addOuvinteOk(ActionListener ouvinte) {
+        bLiberar.addActionListener(ouvinte);
+    }
 }

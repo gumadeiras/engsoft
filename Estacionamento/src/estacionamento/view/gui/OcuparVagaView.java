@@ -12,12 +12,12 @@ import java.awt.event.ActionListener;
  *
  * @author gustavo
  */
-public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView {
+public class OcuparVagaView extends javax.swing.JPanel implements IOcuparVagaView {
 
     /**
      * Creates new form OcupaVagaView
      */
-    public OcupaVagaView() {
+    public OcuparVagaView() {
         initComponents();
     }
 
@@ -93,7 +93,7 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
                             .addComponent(fieldPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                             .addComponent(fieldCor, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                             .addComponent(bOcupaVaga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +114,7 @@ public class OcupaVagaView extends javax.swing.JPanel implements IOcuparVagaView
                     .addComponent(labelCor))
                 .addGap(18, 18, 18)
                 .addComponent(bOcupaVaga)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

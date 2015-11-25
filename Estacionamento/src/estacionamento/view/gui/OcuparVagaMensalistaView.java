@@ -35,6 +35,8 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel implements IOcu
         bOcupaVaga = new javax.swing.JButton();
         labelCPF = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(400, 300));
+
         labelOcupaVaga.setText("Ocupar Vaga Mensalista");
 
         fieldCPF.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +62,7 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel implements IOcu
                         .addComponent(labelOcupaVaga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(bOcupaVaga, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,7 +75,7 @@ public class OcuparVagaMensalistaView extends javax.swing.JPanel implements IOcu
                     .addComponent(labelCPF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bOcupaVaga)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

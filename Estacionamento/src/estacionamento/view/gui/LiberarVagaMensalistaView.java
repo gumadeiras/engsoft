@@ -5,11 +5,14 @@
  */
 package estacionamento.view.gui;
 
+import estacionamento.view.ILiberarVagaMensalistaView;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author gustavo
  */
-public class LiberarVagaMensalistaView extends javax.swing.JPanel {
+public class LiberarVagaMensalistaView extends javax.swing.JPanel implements ILiberarVagaMensalistaView {
 
     /**
      * Creates new form LiberarVagaMensalistaView
@@ -57,25 +60,23 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelEntrada)
-                    .addComponent(bLiberar)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelValor)
-                            .addComponent(labelSaida))))
-                .addGap(145, 145, 145))
             .addGroup(layout.createSequentialGroup()
                 .addGap(88, 88, 88)
                 .addComponent(labelCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addContainerGap(129, Short.MAX_VALUE))
+                    .addComponent(jLabel4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelEntrada)
+                            .addComponent(bLiberar)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(labelValor)
+                                    .addComponent(labelSaida))))
+                        .addComponent(fieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,7 +95,7 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
                 .addComponent(labelValor)
                 .addGap(18, 18, 18)
                 .addComponent(bLiberar)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -112,4 +113,14 @@ public class LiberarVagaMensalistaView extends javax.swing.JPanel {
     private javax.swing.JLabel labelSaida;
     private javax.swing.JLabel labelValor;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public String getCpf() {
+        return fieldCPF.getText();
+    }
+
+    @Override
+    public void addOuvinteOk(ActionListener ouvinte) {
+        bLiberar.addActionListener(ouvinte);
+    }
 }

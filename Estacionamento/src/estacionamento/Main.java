@@ -11,7 +11,7 @@ import estacionamento.model.bo.Veiculo;
 import estacionamento.model.bo.funcionarios.CaixaBehavior;
 import estacionamento.view.MainView;
 import estacionamento.view.gui.CaixaView;
-import estacionamento.view.gui.OcupaVagaView;
+import estacionamento.view.gui.OcuparVagaView;
 import estacionamento.view.gui.OcuparVagaView;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -32,22 +32,22 @@ public class Main {
     public static void main(String[] args) {
         
         MainView view = new MainView(); 
-        view.addPanel(new OcupaVagaView());
-        view.addPanel(new OcupaVagaView());
+        view.addPanel(new OcuparVagaView());
+        view.addPanel(new OcuparVagaView());
         view.addPanel(new CaixaView());
         
         //System.out.println(view.getClass().getName());
         
-        view.swapPanel(new OcupaVagaView());
+        view.swapPanel(new OcuparVagaView());
         
         MainView view2 = new MainView(); 
-        view2.addPanel(new OcupaVagaView());
-        view2.addPanel(new OcupaVagaView());
+        view2.addPanel(new OcuparVagaView());
+        view2.addPanel(new OcuparVagaView());
         view2.addPanel(new CaixaView());
         
         //System.out.println(view.getClass().getName());
         
-        view2.swapPanel(new OcupaVagaView());
+        view2.swapPanel(new OcuparVagaView());
         //view.mainPanel.add(new CaixaView());
     }
 }
