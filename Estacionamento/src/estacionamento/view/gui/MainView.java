@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package estacionamento.view;
+package estacionamento.view.gui;
 
+import estacionamento.view.IMainView;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author flavio
  */
-public class MainView extends JFrame {
+public class MainView extends JFrame implements IMainView {
     
     public JPanel mainPanel;
     private CardLayout layout;
@@ -31,11 +32,13 @@ public class MainView extends JFrame {
         setVisible(true);
     }
     
+    @Override
     public void swapPanel(JPanel panel)
     {
         layout.show(mainPanel, panel.getClass().getName());
     }
     
+    @Override
     public void addPanel(JPanel panel)
     {
         mainPanel.add(panel, panel.getClass().getName());

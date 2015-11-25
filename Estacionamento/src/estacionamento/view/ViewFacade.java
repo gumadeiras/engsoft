@@ -13,48 +13,34 @@ import estacionamento.view.gui.*;
  */
 public class ViewFacade {
     
-    public static ICadastrarVeiculoView getCadastrarVeiculoView()
+    public static IMainView getMainView()
     {
-        return new CadastrarVeiculoView();
+        return new MainView();
     }
     
-    public static IClienteNaoCadastradoView getClienteNaoCadastradoView()
+    public static ICaixaView getCaixaView()
     {
-        return new ClienteNaoCadastradoView();
+        return new CaixaView();
     }
     
-    public static IConfirmarPagamentoComumView getConfirmarPagamentoComumView()
+    public static ILiberarVagaMensalistaView getLiberarVagaMensalistaView()
     {
-        return new ConfirmarPagamentoComumView();
+        return new LiberarVagaMensalistaView();
     }
     
-    public static IConfirmarPagamentoMensalistaView getConfirmarPagamentoMensalistaView()
+    public static ILiberarVagaView getLiberarVagaView()
     {
-        return new ConfirmarPagamentoMensalistaView();
+        return new LiberarVagaView();
     }
     
-    public static IEscolherVeiculoView getEscolherVeiculoView()
+    public static IOcuparVagaView getOcuparVagaView()
     {
-        return new EscolherVeiculoView();
+        return new OcuparVagaView();
     }
     
-    public static IIdentificaClienteView getIdentificaClienteView()
+    public static IOcuparVagaMensalistaView getOcuparVagaMensalistaView()
     {
-        return new IdentificaClienteView();
+        return new OcuparVagaMensalistaView();
     }
-    
-    public static IUsuarioLogadoView getUsuarioLogadoView()
-    {
-        return new UsuarioLogadoView();
-    }
-    
-    public static IVagaDisponivelView getVagaDisponivelView()
-    {
-        return new VagaDisponivelView();
-    }
-    
-    public static IVagaOcupadaView getVagaOcupadaView()
-    {
-        return new VagaOcupadaView();
-    }
+
 }

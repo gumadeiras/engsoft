@@ -9,7 +9,7 @@ import estacionamento.model.bo.Funcionario;
 import estacionamento.model.bo.Genero;
 import estacionamento.model.bo.Veiculo;
 import estacionamento.model.bo.funcionarios.CaixaBehavior;
-import estacionamento.view.MainView;
+import estacionamento.view.gui.MainView;
 import estacionamento.view.gui.CaixaView;
 import estacionamento.view.gui.OcuparVagaView;
 import estacionamento.view.gui.OcuparVagaView;
